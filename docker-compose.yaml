@@ -1,0 +1,39 @@
+version: "0.1"
+
+services:
+  db:
+    image: postgres:13.4-alpine
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+    env_file:
+      - .env
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./data/db:/var/lib/postgresql/data
+
+  web:
+    image: web:latest
+    command: python manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - db
+    tty: true
+    ports:
+    - "8000:8000"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+    volumes:
+      - ./app:/app/
+
+#volumes:
+#  pgdata:
+#  database:
+
+
+#networks:
+#  compute:
