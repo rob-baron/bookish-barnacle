@@ -65,11 +65,11 @@ Or from the container id:
 You can log in to the database continer in the same manner.
 
 #Modifying the code:
-##1 clone the repository to your local directory
+## 1 clone the repository to your local directory
 ```
 git clone https://github.com/rob-baron/bookish-barnacle.git
 ```
-##2 open the bookish-barnicle directory using vscode
+## 2 open the bookish-barnicle directory using vscode
 Start up vscode, and open the cloned directory
 
 The directory structure is as follows:
