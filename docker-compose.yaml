@@ -1,5 +1,3 @@
-version: "0.1"
-
 services:
   db:
     image: postgres:13.4-alpine
@@ -7,8 +5,8 @@ services:
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_USER=postgres
-    env_file:
-      - .env
+#    env_file:      # using a .env file  would be one way to define passwords without placing them in the docker file
+#      - .env       # like I have done here
     ports:
       - "5432:5432"
     volumes:

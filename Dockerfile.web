@@ -5,6 +5,6 @@ RUN mkdir /app
 WORKDIR /app
 
 RUN apt update -y \
-    && pip install --upgrade pip \
-    && pip install Django==5.0.3 pip install djangorestframework==3.15.1 psycopg2 \
     && apt-get install -y postgresql-client
+
+RUN pip install Django==5.0.3 djangorestframework==3.15.1 psycopg2 \
