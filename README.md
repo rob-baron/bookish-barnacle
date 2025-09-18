@@ -15,7 +15,7 @@ This is an example interface that I am working on with my neighbor as a way of m
 
 # How to start the containers
 ```
-   % docker build -f Dockerfile.py3 -t py3 py3
+   % docker build -f Dockerfile.web -t py3 .
    % docker compose up
 ```
 
