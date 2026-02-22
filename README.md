@@ -1,5 +1,5 @@
 # bookish-barnacle
-This is an example interface that I am working on with my neighbor as a way of making what he is doing in excel more manageable (I hope).
+This is currently a starter project that has a Django contain with a separate postgres container starting the project with docker compose.
 
 # development environment
 - vscode  ( https://code.visualstudio.com/download)https://code.visualstudio.com/download )
